@@ -485,61 +485,274 @@ footer .final-texto {
 /* ==========================
    CONTADOR REGRESSIVO
 ========================== */
+
 .contador {
-    padding: 80px 8%;
+    padding: 100px 8%;
     text-align: center;
-    background: radial-gradient(circle at top, #1a1a1a 0%, #0b0b0b 100%);
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    background:
+        radial-gradient(circle at center,
+        rgba(252,179,5,0.08),
+        transparent 45%),
+        linear-gradient(
+        180deg,
+        #111 0%,
+        #080808 100%);
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-top: 1px solid rgba(252,179,5,.12);
+    border-bottom: 1px solid rgba(252,179,5,.12);
+}
+
+/* brilho decorativo */
+.contador::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(252,179,5,.10),
+            transparent 70%
+        );
+
+    top: -250px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
 }
 
 .contador h2 {
-    font-size: 34px;
+    font-size: 42px;
+
     font-weight: 800;
-    margin-bottom: 30px;
-    color: #ffffff;
+
+    margin-bottom: 18px;
+
+    color: white;
+
+    letter-spacing: -1px;
+
+    animation: surgir 1s ease;
+}
+
+.contador h2::after {
+    content: "";
+
+    display: block;
+
+    width: 120px;
+
+    height: 4px;
+
+    margin: 16px auto 0;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #fcb305,
+            transparent
+        );
 }
 
 .contador-box {
+
     display: flex;
+
     justify-content: center;
-    gap: 25px;
+
+    gap: 24px;
+
     flex-wrap: wrap;
-    margin-bottom: 25px;
+
+    margin-top: 45px;
+
 }
 
+/* CARD */
 .tempo {
-    background: #141414;
-    border: 1px solid #262626;
-    padding: 25px 30px;
-    border-radius: 16px;
-    min-width: 120px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
+
+    width: 150px;
+
+    min-height: 170px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #191919,
+            #101010
+        );
+
+    border:
+
+        1px solid rgba(252,179,5,.15);
+
+    border-radius: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .45s;
+}
+
+/* reflexo */
+.tempo::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+
+    left: -30%;
+
+    width: 80px;
+
+    height: 300%;
+
+    background:
+
+        rgba(255,255,255,.06);
+
+    transform: rotate(25deg);
+
+    transition: .8s;
+
+}
+
+.tempo:hover::before {
+
+    left: 140%;
+
 }
 
 .tempo:hover {
-    transform: translateY(-5px);
+
+    transform:
+        translateY(-10px)
+        scale(1.04);
+
     border-color: #fcb305;
+
+    box-shadow:
+        0 0 40px rgba(252,179,5,.15);
+
 }
 
 .tempo span {
-    display: block;
-    font-size: 42px;
+
+    font-size: 64px;
+
     font-weight: 800;
+
+    line-height: 1;
+
     color: #fcb305;
+
+    text-shadow:
+        0 0 18px
+        rgba(252,179,5,.35);
+
 }
 
 .tempo small {
-    font-size: 14px;
-    color: #a0a0a0;
+
+    margin-top: 14px;
+
+    color: #b8b8b8;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 5px;
+
 }
 
+/* mensagem */
 #mensagem-contador {
-    color: #a0a0a0;
-    font-size: 16px;
-    margin-top: 10px;
+
+    margin-top: 40px;
+
+    font-size: 18px;
+
+    color: #bdbdbd;
+
+    max-width: 700px;
+
+    margin-inline: auto;
+
+    line-height: 1.8;
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+.contador{
+padding:80px 6%;
+}
+
+.contador h2{
+font-size:32px;
+}
+
+.tempo{
+
+width:130px;
+
+min-height:150px;
+
+}
+
+.tempo span{
+
+font-size:48px;
+
+}
+
+}
+
+/* animação */
+
+@keyframes surgir {
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
 }
