@@ -481,3 +481,65 @@ footer .final-texto {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+/* ==========================
+   CONTADOR REGRESSIVO
+========================== */
+.contador {
+    padding: 80px 8%;
+    text-align: center;
+    background: radial-gradient(circle at top, #1a1a1a 0%, #0b0b0b 100%);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.contador h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.contador-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.tempo {
+    background: #141414;
+    border: 1px solid #262626;
+    padding: 25px 30px;
+    border-radius: 16px;
+    min-width: 120px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.tempo:hover {
+    transform: translateY(-5px);
+    border-color: #fcb305;
+}
+
+.tempo span {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    color: #fcb305;
+}
+
+.tempo small {
+    font-size: 14px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+#mensagem-contador {
+    color: #a0a0a0;
+    font-size: 16px;
+    margin-top: 10px;
+}

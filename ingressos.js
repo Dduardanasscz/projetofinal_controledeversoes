@@ -75,5 +75,62 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.toggle("active");
         });
     });
-
 });
+
+
+// ==========================
+// CONTADOR EXPOFEST
+// até 23/07/2026 00:00
+// ==========================
+
+const dataEvento = new Date("2026-07-23T00:00:00").getTime();
+
+const diasEl = document.getElementById("dias");
+const horasEl = document.getElementById("horas");
+const minutosEl = document.getElementById("minutos");
+const segundosEl = document.getElementById("segundos");
+const mensagem = document.getElementById("mensagem-contador");
+
+function atualizarContador() {
+
+    const agora = new Date().getTime();
+    const distancia = dataEvento - agora;
+
+    if (distancia <= 0) {
+        diasEl.textContent = "00";
+        horasEl.textContent = "00";
+        minutosEl.textContent = "00";
+        segundosEl.textContent = "00";
+
+        if (mensagem) {
+            mensagem.textContent = "🎉 A EXPOFEST COMEÇOU!";
+        }
+
+        return;
+    }
+
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    if (diasEl) diasEl.textContent = dias;
+    if (horasEl) horasEl.textContent = horas;
+    if (minutosEl) minutosEl.textContent = minutos;
+    if (segundosEl) segundosEl.textContent = segundos;
+
+    if (mensagem) {
+        if (dias <= 1) {
+            mensagem.textContent = " É AMANHÃ!";
+        } else if (dias <= 3) {
+            mensagem.textContent = " Falta muito pouco!";
+        } else if (dias <= 7) {
+            mensagem.textContent = " A contagem está ficando séria!";
+        } else {
+            mensagem.textContent = "Prepare-se para viver uma experiência inesquecível.";
+        }
+    }
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
