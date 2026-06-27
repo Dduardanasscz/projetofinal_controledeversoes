@@ -1,8 +1,10 @@
 // ==========================
-// EFEITO HEADER AO ROLAR
+// HEADER SCROLL
 // ==========================
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
+
+    if (!header) return;
 
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
@@ -13,7 +15,7 @@ window.addEventListener("scroll", function () {
 
 
 // ==========================
-// MODAL DE COMPRA
+// MODAL
 // ==========================
 const buttons = document.querySelectorAll(".btn-comprar");
 const modal = document.getElementById("modal-checkout");
@@ -23,22 +25,25 @@ const ticketPrice = document.getElementById("modal-ticket-price");
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
+
+        if (!modal) return;
+
         const name = button.getAttribute("data-ticket");
         const price = button.getAttribute("data-price");
 
-        ticketName.textContent = name;
-        ticketPrice.textContent = `R$ ${price}`;
+        if (ticketName) ticketName.textContent = name;
+        if (ticketPrice) ticketPrice.textContent = `R$ ${price}`;
 
         modal.style.display = "flex";
     });
 });
 
-// fechar modal
-closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+if (closeModal && modal) {
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+}
 
-// fechar clicando fora do modal
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
@@ -47,14 +52,28 @@ window.addEventListener("click", (e) => {
 
 
 // ==========================
-// FAQ (ACORDEÃO)
+// FAQ (CORRIGIDO 100%)
 // ==========================
-const faqItems = document.querySelectorAll(".faq-item");
+document.addEventListener("DOMContentLoaded", () => {
 
-faqItems.forEach(item => {
-    const question = item.querySelector(".faq-question");
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    question.addEventListener("click", () => {
-        item.classList.toggle("active");
+    faqItems.forEach(item => {
+
+        const question = item.querySelector(".faq-question");
+
+        if (!question) return;
+
+        question.addEventListener("click", () => {
+
+            faqItems.forEach(el => {
+                if (el !== item) {
+                    el.classList.remove("active");
+                }
+            });
+
+            item.classList.toggle("active");
+        });
     });
+
 });
