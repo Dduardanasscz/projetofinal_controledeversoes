@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingressos da Festa - Expofesta Paulistana 2026 </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="ingressos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>ExpoFest <span>2026</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="atracoes.html">Atrações</a></li>
+                <li><a href="ingressos.html" class="active">Ingressos</a></li>
+                <li><a href="#faq">Contato</a></li> </ul>
+        </nav>
+
+    </header>
+
+    <section class="ingressos-hero">
+        <div class="hero-container">
+            <h2>Ingressos Oficiais</h2>
+            <p>Garanta o seu passaporte antecipado para a maior experiência festiva e cultural do ano. Adquirindo seu ingresso de forma antecipada, você assegura sua entrada sem filas, tem acesso a lotes promocionais exclusivos e escolhe os melhores setores para curtir os shows e o rodeio tradicional com total conforto e segurança.</p>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-container">
+
+            <div class="ticket-card">
+                <div class="card-header">
+                    <h3>Meia-Entrada</h3>
+                    <p class="ticket-desc">Acesso essencial destinado a estudantes, professores e idosos amparados por lei.</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">R$</span><span class="price-value">30</span>
+                </div>
+                <ul class="ticket-benefits">
+                    <li><i class="fa-solid fa-circle-check"></i> Acesso total à Arena Principal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Entrada ao Parque de Diversões</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Acesso à Praça de Alimentação</li>
+                </ul>
+                <button class="btn-comprar" data-ticket="Meia-Entrada" data-price="30">Comprar ingresso</button>
+            </div>
+
+            <div class="ticket-card featured">
+                <div class="badge-featured">Mais Vendido</div>
+                <div class="card-header">
+                    <h3>Pista Inteira</h3>
+                    <p class="ticket-desc">A melhor experiência geral do evento para o público geral, vibrando direto do coração da pista.</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">R$</span><span class="price-value">60</span>
+                </div>
+                <ul class="ticket-benefits">
+                    <li><i class="fa-solid fa-circle-check"></i> Acesso completo à Arena e Shows</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Circulação livre nos pavilhões culturais</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Acesso a todos os palcos e rodeios</li>
+                </ul>
+                <button class="btn-comprar" data-ticket="Pista Inteira" data-price="60">Comprar ingresso</button>
+            </div>
+
+            <div class="ticket-card vip">
+                <div class="card-header">
+                    <h3>Premium VIP</h3>
+                    <p class="ticket-desc">Acesso privilegiado e conforto supremo para quem busca curtir o evento no mais alto nível.</p>
+                </div>
+                <div class="card-price">
+                    <span class="currency">R$</span><span class="price-value">150</span>
+                </div>
+                <ul class="ticket-benefits">
+                    <li><i class="fa-solid fa-star"></i> Front-stage exclusivo colado no palco</li>
+                    <li><i class="fa-solid fa-star"></i> Banheiros e bares exclusivos</li>
+                    <li><i class="fa-solid fa-star"></i> Entrada prioritária sem filas no evento</li>
+                    <li><i class="fa-solid fa-star"></i> Welcome Drink incluso</li>
+                </ul>
+                <button class="btn-comprar" data-ticket="Premium VIP" data-price="150">Comprar ingresso</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="informacoes" class="info-section">
+        <h2>Informações Importantes</h2>
+        <div class="info-grid">
+            <div class="info-box">
+                <i class="fa-solid fa-clock"></i>
+                <h4>Horários</h4>
+                <p>Abertura dos portões às 18h00. O início das competições de rodeio ocorre às 20h00 e os shows principais a partir das 23h00.</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-id-card"></i>
+                <h4>Documentos Exigidos</h4>
+                <p>É obrigatória a apresentação de documento oficial com foto original físico ou via aplicativo oficial do governo nacional para validação no portão.</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h4>Regras de Meia-Entrada</h4>
+                <p>Estudantes devem portar a Carteira de Identificação Estudantil (CIE) vigente. Professores da rede pública necessitam do holerite atualizado.</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Políticas de Segurança</h4>
+                <p>Proibida a entrada com objetos cortantes, garrafas de vidro, latas, fogos de artifício e alimentos ou bebidas externos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contador">
+    <h2> A ExpoFest começa em</h2>
+
+    <div class="contador-box">
+        <div class="tempo">
+            <span id="dias">00</span>
+            <small>Dias</small>
+        </div>
+
+        <div class="tempo">
+            <span id="horas">00</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="tempo">
+            <span id="minutos">00</span>
+            <small>Min</small>
+        </div>
+
+        <div class="tempo">
+            <span id="segundos">00</span>
+            <small>Seg</small>
+        </div>
+    </div>
+</section>
+
+    <section id="faq" class="faq-section">
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Como receberei meu ingresso?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Logo após a aprovação do pagamento, você receberá um e-mail de confirmação contendo o link para download do seu ingresso em formato PDF e o código QR Code para apresentação no celular.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Posso cancelar ou pedir reembolso?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, cancelamentos e reembolsos integrais podem ser solicitados em até 7 dias corridos após a data de aquisição, desde que o pedido ocorra em até 48 horas de antecedência do início do evento.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Haverá bilheteria física no local do evento?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Caso os lotes não se esgotem de forma online, haverá venda residual de ingressos físicos na portaria do evento a partir das 17h, sujeitos a reajustes de preço.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-checkout" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            <h2>Ingresso adicionado ao carrinho</h2>
+            <p>Seu ingresso para o setor <strong id="modal-ticket-name">---</strong> foi reservado e está aguardando pagamento.</p>
+            <div class="modal-summary">
+                <span>Total a Pagar:</span>
+                <strong id="modal-ticket-price">R$ 00,00</strong>
+            </div>
+            <button class="btn-finalizar" onclick="window.location.reload();">Ir para o Pagamento</button>
+        </div>
+    </div>
+
+<section class="contador">
+
+    <h2>Faltam poucos dias!</h2>
+
+    <p>Prepare-se para viver uma experiência inesquecível.</p>
+</section>
+
+
+
+
+<footer>
+
+    <p>
+        © 2026 ExpoFest - Todos os direitos reservados.
+    </p>
+
+    <div class="redes">
+
+        <a href="#"><i class="fab fa-instagram"></i></a>
+
+        <a href="#"><i class="fab fa-facebook"></i></a>
+
+        <a href="#"><i class="fab fa-youtube"></i></a>
+
+    </div>
+
+</footer>
+<script src="ingressos.js"></script>
+
+</body>
+</html>
