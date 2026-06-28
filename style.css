@@ -1,0 +1,417 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo h1{
+    color:#fff;
+    font-size:32px;
+}
+
+.logo span{
+    color:#ffb300;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffb300;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("imagens/banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.banner-texto{
+    max-width:700px;
+}
+
+.banner h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.banner p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.botao{
+    display:inline-block;
+    background:#ffb300;
+    color:#111;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.botao:hover{
+    background:#fff;
+    transform:scale(1.05);
+}
+
+/* ==========================
+   SOBRE
+========================== */
+
+.sobre{
+    padding:90px 10%;
+    text-align:center;
+}
+
+.sobre h2{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#ffb300;
+}
+
+.sobre p{
+    font-size:18px;
+    line-height:32px;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.destaques{
+    padding:90px 8%;
+    background:#1a1a1a;
+}
+
+.destaques h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:#ffb300;
+    font-size:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:30px;
+}
+
+.card{
+
+    background:#222;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    background:#ffb300;
+
+    color:#111;
+
+}
+
+.card i{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    font-size:25px;
+
+}
+
+/* ==========================
+   CONTADOR
+========================== */
+
+.contador{
+
+    padding:80px;
+
+    text-align:center;
+
+}
+
+.contador h2{
+
+    font-size:45px;
+
+    color:#ffb300;
+
+    margin-bottom:20px;
+
+}
+
+.contador p{
+
+    font-size:22px;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#000;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+footer p{
+
+    margin-bottom:20px;
+
+}
+
+.redes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.redes a{
+
+    color:white;
+
+    font-size:28px;
+
+    transition:.3s;
+
+}
+
+.redes a:hover{
+
+    color:#ffb300;
+
+    transform:scale(1.2);
+
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+nav ul{
+
+    gap:18px;
+
+}
+
+.banner h2{
+
+    font-size:42px;
+
+}
+
+.banner p{
+
+    font-size:18px;
+
+}
+
+.sobre,
+.destaques{
+
+    padding:70px 6%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.banner h2{
+
+    font-size:32px;
+
+}
+
+.banner p{
+
+    font-size:16px;
+
+}
+
+.botao{
+
+    padding:12px 28px;
+
+}
+
+.logo h1{
+
+    font-size:25px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+}
+/* ==========================
+   DATAS DO EVENTO
+========================== */
+
+.datas{
+    padding:80px 10%;
+    text-align:center;
+    background:#181818;
+}
+
+.datas h2{
+    color:#ffb300;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.datas p{
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.dias{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.dia{
+    width:140px;
+    background:#222;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+}
+
+.dia:hover{
+    transform:translateY(-8px);
+    background:#ffb300;
+    color:#111;
+}
+
+.dia h3{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.dia span{
+    font-size:16px;
+    font-weight:500;
+}
+/* ==========================
+   HORÁRIO
+========================== */
+
+.horario{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.horario h2{
+    color:#ffb300;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.horario p{
+    font-size:18px;
+    margin-bottom:10px;
+    line-height:30px;
+}
