@@ -395,3 +395,23 @@ nav ul{
     font-size:16px;
     font-weight:500;
 }
+/* ==========================
+   HORÁRIO
+========================== */
+
+.horario{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.horario h2{
+    color:#ffb300;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.horario p{
+    font-size:18px;
+    margin-bottom:10px;
+    line-height:30px;
+}
